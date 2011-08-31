@@ -1,3 +1,5 @@
+#require 'less' #TODO RAILS3: consider making this optional
+
 module SpreeBlueTheme
   class Engine < Rails::Engine
     railtie_name "spree_blue_theme"
