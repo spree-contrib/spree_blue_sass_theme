@@ -1,25 +1,20 @@
-@import "_mixins";
+@import "mixins";
 
 .flash {
-  .rounded_corners;
+  @include rounded_corners;
   font-size: 1.3em;
   margin-bottom: 1em;
   padding: 0.8em;
 }
 .flash.notice {
-  .message_box(#CDF, #569, #9AC);
+  @include message_box(#CDF, #569, #9AC);
 }
 .flash.errors {
-  .message_box(#F4B4B4, #000, #000);
+  @include message_box(#F4B4B4, #000, #000);
 }
-
-
 .formError, .errorExplanation {
-  font-size: 1.3em;
-  margin-bottom: 1em;
-  padding: 0.8em;
-  .rounded_corners;
-  .message_box(#F4B4B4, #000, #000);
+  @extend .flash;
+  @extend .flash.errors;
   p { margin: 0px; }
   ul { margin-bottom: 0px; }
   h2 {
@@ -28,5 +23,4 @@
     margin: 0px;
   }
 }
-
 .fieldWithErrors { clear: none; }

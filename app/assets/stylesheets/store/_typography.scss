@@ -1,14 +1,14 @@
-@import "_colors";
+@import "colors";
 
 body {
   line-height: 1.5;
   font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 75%; }
 
 h1 {
   font-weight: normal;
-  color: #222222;
+  color: #222;
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.5em; }
@@ -17,34 +17,34 @@ h1 {
 
 h2 {
   font-weight: normal;
-  color: #222222;
+  color: #222;
   font-size: 2em;
   margin-bottom: 0.75em; }
 
 h3 {
   font-weight: normal;
-  color: #222222;
+  color: #222;
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1em; }
 
 h4 {
   font-weight: normal;
-  color: #222222;
+  color: #222;
   font-size: 1.2em;
   line-height: 1.25;
   margin-bottom: 1.25em; }
 
 h5 {
   font-weight: normal;
-  color: #222222;
+  color: #222;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1.5em; }
 
 h6 {
   font-weight: normal;
-  color: #222222;
+  color: #222;
   font-size: 1em;
   font-weight: bold; }
 
@@ -66,7 +66,7 @@ p {
 
 a {
   text-decoration: underline;
-  color: @link_color; }
+  color: $link_color; }
 
 blockquote {
   margin: 1.5em;
@@ -131,28 +131,22 @@ th {
   font-weight: bold; }
 
 thead th {
-  background: #c3d9ff; }
+  background: #C3D9FF; }
 
 th, td, caption {
   padding: 4px 10px 4px 5px; }
 
 tr.even td {
-  background: #e5ecf9; }
+  background: #E5ECF9; }
 
 tfoot {
   font-style: italic; }
 
 caption {
-  background: #eee; }
-
-
-
-
-
-
+  background: #EEE; }
 
 .quiet {
-  color: #666666; }
+  color: #666; }
 
 .loud {
-  color: #111111; }
+  color: #111; }

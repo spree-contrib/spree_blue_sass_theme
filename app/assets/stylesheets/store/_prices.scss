@@ -1,11 +1,11 @@
-@import "_colors";
+@import "colors";
 
 .prices {
   font-weight: bold;
   #product-details .prices { font-size: 1.25em; }
 }
 .price.selling {
-  color: @selling_price_color;
+  color: $selling_price_color;
 }
 #product-details .price.selling {
   font-size: 1.5em;
@@ -14,5 +14,5 @@
 .price.diff {
   font-style: italic;
   font-weight: normal;
-  color: @lighter_text_color;
+  color: $lighter_text_color;
 }

@@ -1,15 +1,15 @@
-@import "_colors";
-@import "_mixins";
+@import "colors";
+@import "mixins";
 
 #product-variants {
   margin-bottom: 1em;
   ul {
-    .no-bullets;
-    .no_margin_or_padding;
+    @include no-bullets;
+    @include no_margin_or_padding;
   }
 }
 #product-images {
-  .column(7);
+  @include column(7);
   h4 {
     padding: 6px 0px;
     margin: 0px;
@@ -30,27 +30,25 @@
   }
 }
 #product-description {
-  .column(8);
-  .colborder;
+  @include column(8);
+  @include colborder;
 }
-#cart-form { .column-last(7); }
+#cart-form { @include column-last(7); }
 
 #taxon-crumbs {
-  .column(24);
+  @include column(24);
   display: block;
   float: right;
   margin-top: 20px;
   width: 300px;
 }
 
-
 dl.table-display { margin: 0; padding: 0; }
 dl.table-display dt, dl.table-display dd {
   float: left;
   margin: 0;
   padding: 5px;
-  border-top: 1px solid @default_border_color;
+  border-top: 1px solid $default_border_color;
 }
 dl.table-display dt { width: 100px; }
 dl.table-display dd { width: 180px; }
-

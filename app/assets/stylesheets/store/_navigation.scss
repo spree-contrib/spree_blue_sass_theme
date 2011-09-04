@@ -1,8 +1,8 @@
-@import "_colors";
-@import "_mixins";
+@import "colors";
+@import "mixins";
 
-.navigation-list {
-  .no-bullets;
+.taxons-list {
+  @include no-bullets;
   margin: 0 0 1.5em -15px;
   li {
     margin: 0;
@@ -18,14 +18,14 @@
       overflow: hidden;
     }
     a:hover {
-      background: url(../images/menu-hover.png) right center no-repeat;
+      background: image-url('menu-hover.png') right center no-repeat;
     }
   }
   li.current {
     width: 200px;
     a {
       width: 180px;
-      background: url(../images/menu-current.png) right center no-repeat;
+      background: image-url('menu-current.png') right center no-repeat;
       white-space: nowrap;
       overflow: hidden;
     }
@@ -41,12 +41,11 @@
   }
 }
 
-
-.breadcrumbs {
+#breadcrumbs {
   margin-bottom: 1em;
   ul {
-    .inline-list;
-    .no_margin_or_padding;
+    @include inline-list;
+    @include no_margin_or_padding;
     overflow: auto;
     li {
       line-height: 20px;
@@ -58,19 +57,16 @@
       }
       span { color: #333; }
     }
-        
+
   }
 }
 
-
 div#login-bar { display: inline; }
 
-
 ul#language-bar {
-  .inline-list;
+  @include inline-list;
   strong { font-weight: normal; }
 }
-
 
 ul#nav-bar {
   line-height: 50px;
@@ -78,7 +74,7 @@ ul#nav-bar {
   clear: both;
   font-size: 1.2em;
   list-style: none;
-  .no_margin_or_padding;
+  @include no_margin_or_padding;
   li {
     float: left;
     margin-left: 1em;
@@ -86,16 +82,14 @@ ul#nav-bar {
   li.cart-indicator {
     a {
       padding-right: 40px;
-      background: transparent url(../images/cart-empty_x32.png) center right no-repeat;
+      background: transparent image-url('cart-empty_x32.png') center right no-repeat;
       display: block;
     }
     a.full {
-      background-image: url(../images/cart-full_x32.png);
+      background-image: image-url('cart-full_x32.png');
     }
   }
 }
-
-
 
 .pagination {
   padding-top: 10px;
@@ -106,12 +100,12 @@ ul#nav-bar {
   }
   a.page {
     text-decoration: none;
-    border: 1px solid #9aafe5;
+    border: 1px solid #9AAFE5;
     color: #2e6ab1;
   }
   a.page:hover, a.page:active {
-    border: 1px solid #2b66a5;
-    color: @black;
+    border: 1px solid #2B66A5;
+    color: $black;
   }
   a.next_page {
     font-weight: bold;
@@ -123,8 +117,8 @@ ul#nav-bar {
   span.current_page {
     font-weight: bold;
     border: 1px solid;
-    border-color: @dark_blue;
-    background-color: @medium_blue;
-    color: @white;
+    border-color: $dark_blue;
+    background-color: $medium_blue;
+    color: $white;
   }
 }

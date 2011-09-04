@@ -1,9 +1,9 @@
 form {
-  
+
   p.field {
     margin-bottom: 0.5em;
     clear: both;
-    
+
     span.req {
       color: red;
       float: left; 
@@ -11,23 +11,23 @@ form {
       position: relative;
       top: -3px;
     }
-    
-    input[type=text], select { 
+
+    input[type=text], select {
       float: left;
-      margin: 0 5px 7px 0; 
+      margin: 0 5px 7px 0;
     }
   }
   p.field.radios {
     line-height: 150%;
   }
-  
+
 }
 
 label {
   font-weight: bold;
 }
 
-div#checkout #checkout_form_address #billing label.error, 
+div#checkout #checkout_form_address #billing label.error,
 div#checkout #checkout_form_address #shipping label.error
 {
   color: red;

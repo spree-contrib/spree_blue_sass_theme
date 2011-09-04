@@ -1,8 +1,8 @@
-@import "_colors";
-@import "_mixins";
+@import "colors";
+@import "mixins";
 
 div#subtotal {
-  .rightie;
+  @include rightie;
   width: auto;
   text-align: left;
 }

@@ -1,27 +1,23 @@
-@import "_colors";
-@import "_mixins";
+@import "colors";
+@import "mixins";
 
 body {
-  margin-top: 0px;
-  background: #ffffff url(../images/tile-slider.png) top left repeat-x;
+  margin-top: 10px;
+  background: #FFF image-url('body-back.png') top left repeat-x;
 }
 
-.container_bg{
-  width:100%;
-  background:url(../images/tile-header.png) top left repeat-x;
-}
-
-div.left { .leftie; }
-div.right { .rightie;  }
+div.left { @include leftie; }
+div.right { @include rightie;  }
 a { outline: none; }
 
 #wrapper {
-  background: transparent url(../images/wrapper-back.png) top center no-repeat;
+  background: transparent image-url('wrapper-back.png') top center no-repeat;
   padding: 25px 20px 20px;
   position: relative;
+  min-height: 420px;
   }
   body.two-col #wrapper {
-    background-image: url(../images/wrapper-back-2.png);
+    background-image: image-url('wrapper-back-2.png');
   }
 
 .container {
@@ -31,24 +27,24 @@ a { outline: none; }
   display: block; }
 
 #sidebar {
-  .column(4);
-  .colborder;
+  @include column(4);
+  @include colborder;
   h3 { margin-bottom: .5em; }
 }
 
 body.one-col #content {
-  .column-last(24);
+  @include column-last(24);
 }
 body.two-col #content {
-  .column-last(19);
+  @include column-last(19);
 }
 
 #header {
   position: relative;
-  color: @medium_blue;
+  color: $medium_blue;
   clear: both;
-  a { color: @link_color; }
-  a:hover { color: @link_hover_color; }
+  a { color: $link_color; }
+  a:hover { color: $link_hover_color; }
 
 }
 

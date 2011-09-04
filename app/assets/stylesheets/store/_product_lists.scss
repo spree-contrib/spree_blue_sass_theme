@@ -1,19 +1,19 @@
-@import "_colors";
-@import "_mixins";
+@import "colors";
+@import "mixins";
 
 .product-listing {
-  .no-bullets;
+  @include no-bullets;
   margin: 2em 0px 0px 0px;
   padding: 0px;
   li {
-    .rounded_corners(3px);
+    @include rounded_corners(3px);
     height: 180px;
     width: 140px;
     text-align: center;
     float: left;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #DDD;
     position: relative;
     a {
       display: block;
@@ -27,28 +27,28 @@
       padding: 5px;
       width: 150px;
       min-height: 60px;
-      background: #FFF url(../images/shadow_top.png) 0px -35px repeat-x;
-      border-top: 1px solid @white;
+      background: #FFF image-url('shadow-top.png') 0px -35px repeat-x;
+      border-top: 1px solid $white;
       span { display: block; }
     }
   }
   li:hover {
     border-color: #1B1B1B;
     a.info {
-      background: #1B1B1B url(../images/bottom_shine.png) bottom left repeat-x;
-      color: #fff;
+      background: #1B1B1B image-url('bottom-shine.png') bottom left repeat-x;
+      color: #FFF;
     }
   }
 }
 
 ul.thumbnails {
-  .no_margin_or_padding;
+  @include no_margin_or_padding;
   list-style: none;
   li {
     float: left;
     margin-right: 5px;
     padding: 3px;
-    border: 1px solid @white;
+    border: 1px solid $white;
     min-height: 50px;
     width: 50px;
     position: relative;

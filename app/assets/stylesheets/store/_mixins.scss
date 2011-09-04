@@ -1,0 +1,72 @@
+@mixin no_margin_or_padding {
+  margin: 0; padding: 0;
+}
+
+@mixin leftie {
+  float: left;
+  width: 49%;
+}
+
+@mixin rightie {
+  float: right;
+  width: 49%;
+}
+
+@mixin rounded_corners ($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin message_box ($bg_color: #ccddff, $color: #556699, $border_color: #99aacc) {
+  background: $bg_color image-url('shadow-top.png') 0px -50px repeat-x;
+  color: $color;
+  border: 1px solid $border_color;
+}
+
+@mixin clearfix {
+  overflow: hidden;
+  display: inline-block; }
+  .clearfix {
+    display: block; }
+
+@mixin nowrap { white-space: nowrap; }
+
+@mixin no-bullets {
+  list-style: none;
+}
+
+@mixin inline-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+  li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+  }
+}
+
+
+/* Compass/blueprint mixins for layout */
+
+$col_margin: 10px;
+$col_width: 30px;
+
+@mixin column-last ($span: 1) {
+  display: inline;
+  float: left;
+  width: $col_width * $span + ($col_margin * ($span - 1));
+}
+@mixin column ($span: 1) {
+  @include column-last($span);
+  margin-right: $col_margin;
+}
+
+@mixin colborder {
+  min-height: 100px;
+  padding-right: 24px;
+  margin-right: 25px;
+  border-right: 1px solid #eeeeee;
+}

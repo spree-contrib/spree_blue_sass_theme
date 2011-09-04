@@ -1,11 +1,11 @@
-@import "_mixins";
+@import "mixins";
 
 button, a.button, input.button {
-  .rounded_corners(0.3em);
-  background: #efefef url(../images/buttons/bg-button.png) center left repeat-x !important;
+  @include rounded_corners(0.3em);
+  background: #EFEFEF image-url('buttons/bg-button.png') center left repeat-x !important;
   border-style: solid;
   border-width: 1px !important;
-  border-color: #ddd #999 #999 #ddd !important;
+  border-color: #DDD #999 #999 #DDD !important;
   -moz-outline-radius: .3em;
   color: #111;
   display: inline-block;
@@ -38,17 +38,17 @@ button.disabled, a.button.disabled, input.button.disabled{
 }
 
 button:hover, a.button:hover, input.button:hover {
-  background-image: url(../images/buttons/bg-button-hover.png) !important;
+  background-image: image-url('buttons/bg-button-hover.png') !important;
 }
 
 button.large, a.button.large, input.button.large {
-  .rounded_corners(0.3em);
+  @include rounded_corners(0.3em);
   font-size: 1.4em !important;
   line-height: 1.4em;
 }
 
 button.small, a.button.small, input.button.small {
-  .rounded_corners(4px);
+  @include rounded_corners(4px);
   font-size: .9em;
   line-height: 1.4em;
   padding: 5px 10px;
