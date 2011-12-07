@@ -21,4 +21,3 @@ INSTALLATION
 
     $ rake assets:clean
     $ rake assets:precompile
-    
