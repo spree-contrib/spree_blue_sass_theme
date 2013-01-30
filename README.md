@@ -20,7 +20,7 @@ INSTALLATION
 3. Add this line to your app's `app/assets/stylesheets/store/all.css` manifest file, after all of
    the other spree requires (such as `require store/spree_core`):
 
-        *= require store/spree_blue_theme
+    *= require store/spree_blue_theme
 
 4. Optional: Clear out precompiled assets (required for install in sandbox):
 
