@@ -12,31 +12,45 @@ a { outline: none; }
 
 #wrapper {
   background: transparent image-url('wrapper-back.png') top center no-repeat;
-  padding: 25px 20px 20px;
   position: relative;
   min-height: 420px;
-  }
-  body.two-col #wrapper {
+  body.two-col & {
     background-image: image-url('wrapper-back-2.png');
   }
+}
 
 .container {
-  width: 950px;
   margin: 0 auto;
   overflow: hidden;
   display: block; }
 
 #sidebar {
-  @include column(4);
-  @include colborder;
+  //@include column(4);
+  //@include colborder;
+  display: inline;
+  float: left;
+  width: 150px;
+  min-height: 100px;
+  margin-right: 10px;
+  padding-right: 24px;
+  margin-left: 22px;
+  border-right: 1px solid #EEE;
+  margin-top: 6px;
+  padding-top: 20px;
   h3 { margin-bottom: .5em; }
 }
 
 body.one-col #content {
-  @include column-last(24);
+  display: inline;
+  float: left;
+  width: 910px;
+  padding: 20px;
 }
 body.two-col #content {
-  @include column-last(19);
+  display: inline;
+  float: left;
+  width: 730px;
+  margin-left: 0;
 }
 
 #header {

@@ -1,43 +1,52 @@
 @import "colors";
 @import "mixins";
 
-.taxons-list {
-  @include no-bullets;
-  margin: 0 0 1.5em -15px;
-  li {
-    margin: 0;
-    a {
-      cursor: pointer!important;
-      text-decoration: none;
-      color: #333;
-      display: block;
-      line-height: 2.5em;
-      padding-left: 20px;
-      width: 170px;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    a:hover {
-      background: image-url('menu-hover.png') right center no-repeat;
-    }
-  }
-  li.current {
-    width: 200px;
-    a {
-      width: 180px;
-      background: image-url('menu-current.png') right center no-repeat;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    a.root {
-      width: 183px;
-    }
-  }
-  a.root {
+#taxonomies {
+  .taxonomy-root {
+    font-weight: normal;
     color: #222;
     font-size: 1.5em;
-    text-indent: -5px;
-    line-height: 2.2em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+  .taxons-list {
+    @include no-bullets;
+    margin: 0 0 1.5em -15px;
+    li {
+      margin: 0;
+      a {
+        cursor: pointer !important;
+        text-decoration: none;
+        color: #333;
+        display: block;
+        line-height: 2.5em;
+        padding-left: 20px;
+        width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+        &:hover {
+          background: image-url('menu-hover.png') right center no-repeat;
+        }
+      }
+    }
+    li.current {
+      width: 200px;
+      a {
+        width: 180px;
+        background: image-url('menu-current.png') right center no-repeat;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &.root {
+        width: 183px;
+      }
+    }
+    a.root {
+      color: #222;
+      font-size: 1.5em;
+      text-indent: -5px;
+      line-height: 2.2em;
+    }
   }
 }
 
@@ -68,28 +77,65 @@ ul#language-bar {
   strong { font-weight: normal; }
 }
 
+//==================================================================================================
+
 ul#nav-bar {
+  /*
   line-height: 50px;
   float: right;
   clear: both;
-  font-size: 1.2em;
   list-style: none;
   @include no_margin_or_padding;
   li {
     float: left;
     margin-left: 1em;
   }
-  li.cart-indicator {
-    a {
-      padding-right: 40px;
-      background: transparent image-url('cart-empty_x32.png') center right no-repeat;
-      display: block;
-    }
-    a.full {
-      background-image: image-url('cart-full_x32.png');
+  */
+}
+
+nav#top-nav-bar {
+  //width: 750px;
+  //margin-top: 30px;
+  //float: right;
+  ul {
+    li {
+      a {
+        font-weight: normal;
+        text-transform: none;
+      }
     }
   }
 }
+
+nav #main-nav-bar {
+  border: none;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  li {
+    &#link-to-cart {
+      // Added to the a instead so that we can change based on .full or not (default).
+      background: none;
+
+      a {
+        padding-right: 40px;
+        background: transparent image-url('cart-empty_x32.png') center right no-repeat;
+        //color: $link_color;
+        .amount {
+          border-left: none;
+        }
+
+        &.full {
+          background-image: image-url('cart-full_x32.png');
+        }
+      }
+    }
+  }
+
+}
+
+//==================================================================================================
 
 .pagination {
   padding-top: 10px;
