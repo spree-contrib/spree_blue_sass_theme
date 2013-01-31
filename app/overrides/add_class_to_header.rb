@@ -1,4 +1,5 @@
-Deface::Override.new(:virtual_path => 'spree/layouts/spree_application',
+# TODO: Change .container to #header in the stylesheets
+Deface::Override.new(:virtual_path => 'spree/shared/_header',
                      :name => 'add_class_to_header',
-                     :set_attributes => 'div#header',
+                     :set_attributes => '#header',
                      :attributes => { :class => 'container' })
